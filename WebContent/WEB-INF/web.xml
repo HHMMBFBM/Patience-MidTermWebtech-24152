@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>MidExamWebTec</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>UsersServlet</servlet-name>
+  <servlet-class>com.auca.service.UsersServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>UsersServlet</servlet-name>
+  <url-pattern>/users</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+  <servlet-name>TeacherServlet</servlet-name>
+  <servlet-class>com.auca.service.TeacherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TeacherServlet</servlet-name>
+  <url-pattern>/teacher</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>CourseDefinition</servlet-name>
+  <servlet-class>com.auca.service.CourseDefinitionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CourseDefinition</servlet-name>
+  <url-pattern>/coursedefinition</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Semester</servlet-name>
+  <servlet-class>com.auca.service.SemesterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Semester</servlet-name>
+  <url-pattern>/semester</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Student</servlet-name>
+  <servlet-class>com.auca.service.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Student</servlet-name>
+  <url-pattern>/student</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Report</servlet-name>
+  <servlet-class>com.auca.service.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Report</servlet-name>
+  <url-pattern>/report</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>AcademicUnit</servlet-name>
+  <servlet-class>com.auca.service.AcademicUnitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AcademicUnit</servlet-name>
+  <url-pattern>/academicunit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Course</servlet-name>
+  <servlet-class>com.auca.service.CourseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Course</servlet-name>
+  <url-pattern>/course</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>StudentRegistration</servlet-name>
+    <servlet-class>com.auca.service.StudentRegistrationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>StudentRegistration</servlet-name>
+    <url-pattern>/studentregistration</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>StudentCourse</servlet-name>
+  <servlet-class>com.auca.service.StudentCourseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>StudentCourse</servlet-name>
+  <url-pattern>/studentcourse</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>StudentId</servlet-name>
+  <servlet-class>com.auca.service.StudentRegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>StudentId</servlet-name>
+  <url-pattern>/studentid</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Result</servlet-name>
+  <servlet-class>com.auca.service.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Result</servlet-name>
+  <url-pattern>/result</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>CourseResult</servlet-name>
+  <servlet-class>com.auca.service.CourseResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CourseResult</servlet-name>
+  <url-pattern>/courseresult</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>DisplayData</servlet-name>
+  <servlet-class>com.auca.service.DisplayDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DisplayData</servlet-name>
+  <url-pattern>/displaydata</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>StudentRegistrationUpdate</servlet-name>
+    <servlet-class>com.auca.service.StudentRegistrationUpdateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>StudentRegistrationUpdate</servlet-name>
+    <url-pattern>/studentregistrationupdate</url-pattern>
+</servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>StudentRegistrationDelete</servlet-name>
+    <servlet-class>com.auca.service.StudentRegistrationDeleteServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>StudentRegistrationDelete</servlet-name>
+    <url-pattern>/studentregistrationdelete</url-pattern>
+</servlet-mapping>
+<error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+</error-page>
+ <error-page>
+        <error-code>500</error-code>
+        <location>/error500.jsp</location>
+    </error-page>
+    <session-config>
+    <session-timeout>1</session-timeout> <!-- Time in minutes -->
+</session-config>
+    
+  
+</web-app>

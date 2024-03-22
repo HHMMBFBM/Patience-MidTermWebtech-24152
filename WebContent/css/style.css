@@ -1,0 +1,142 @@
+/* Reset styles for consistency */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button, input {
+    outline: none;
+    border: none;
+}
+
+/* Vertical Navbar Styles */
+.navbar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00447b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    margin-bottom: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background-color: #0056b3;
+}
+
+/* Content Styling */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Styling for Main Content Area */
+.main-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/EAQQL.jpg') center/cover no-repeat;
+    color: #fff;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+}
+
+.main-content p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .navbar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+}
+
+/* Utility classes for text and buttons */
+.text-center {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
