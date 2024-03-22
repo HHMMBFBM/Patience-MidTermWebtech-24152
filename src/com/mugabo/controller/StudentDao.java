@@ -11,7 +11,7 @@ import java.util.List;
 
 public class StudentDao {
 
-    // Create or Save Student
+  
     public void saveStudent(Student student) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession().openSession()) {
@@ -26,7 +26,7 @@ public class StudentDao {
         }
     }
 
-    // Read or Get a Single Student by ID
+
     public Student getStudentById(String studentId) {
         try (Session session = HibernateUtil.getSession().openSession()) {
             return session.get(Student.class, studentId);
@@ -36,7 +36,7 @@ public class StudentDao {
         }
     }
 
-    // Update Student
+
     public void updateStudent(Student student) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession().openSession()) {
@@ -51,7 +51,7 @@ public class StudentDao {
         }
     }
 
-    // Delete Student
+
     public void deleteStudent(String studentId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession().openSession()) {
@@ -69,7 +69,7 @@ public class StudentDao {
         }
     }
 
-    // List All Students
+
     public List<Student> getAllStudents() {
         try (Session session = HibernateUtil.getSession().openSession()) {
             return session.createQuery("from Student", Student.class).list();
